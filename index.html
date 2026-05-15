@@ -32,19 +32,20 @@
         }
 
         /* Overskrift: GIGANTISK (7.0rem), centreret og inter thin */
-        h1 {
-            font-weight: 100; /* Inter Thin */
-            font-size: 7.0rem; 
-            color: #0f172a; 
-            margin: 0 0 3.5rem 0; 
-            letter-spacing: -0.05em;
-            display: flex;
-            justify-content: center;
-            align-items: baseline;
-            
-            /* DE TRE TWEAKS AKTIVERES KUN HER PÅ LOGOET */
-            font-feature-settings: "cv05" 1, "cv08" 1, "ss02" 1;
-        }
+h1 {
+    font-weight: 100; /* Inter Thin */
+    font-size: 7.0rem; 
+    color: #0f172a; 
+    margin: 0 0 3.5rem 0; 
+    letter-spacing: -0.05em;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    
+    /* Bevarer dine store/små bogstaver præcis som du har skrevet dem */
+    text-transform: none; 
+    font-feature-settings: "cv05" 1, "cv08" 1, "ss02" 1;
+}
 
         /* CSS-animation der gør cursoren ultratynd og blinker med en sund olympisk hvilepuls (45 BPM) */
         .cursor {
