@@ -5,41 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INHOUSE ai</title>
     
-    <!-- Henter den officielle Inter skrifttype fra Google Fonts -->
+    <!-- Clean, non-destructive import of the standard Inter typeface -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
 
     <style>
-        /* Sætter Inter Thin overalt på hele siden */
-        body, h1, ul, li, p {
-            font-family: 'Inter', sans-serif;
-            font-weight: 100; /* Inter Thin */
-            color: #0f172a;
-        }
-
+        /* Base system rules - Enforcing universal Inter Thin without structural decay */
         body {
             margin: 0;
-            padding: 3rem 1.5rem;
-            background-color: #f0f6fc; /* Den meget lyse blå */
+            padding: 0;
+            background-color: #f0f6fc; /* Specialized ultra-light architectural blue */
+            font-family: 'Inter', sans-serif;
+            font-weight: 100; /* Fixed Thin across all lower nodes */
+            color: #0f172a;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
         }
 
+        /* Viewport bounding frame specifying 3-line structural top-margin padding */
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            padding: 3rem 1.5rem 3rem 1.5rem;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Clean typographic header structure with zero case-forcing modifiers */
         h1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 100;
             font-size: 7.0rem;
+            color: #0f172a;
             margin: 0 0 3.5rem 0;
             letter-spacing: -0.05em;
             display: flex;
-            align-items: baseline;
+            justify-content: center;
+            align-items: baseline; /* Locks cursor and glyph baselines securely */
         }
 
-        /* Den tynde cursor med den olympiske hjertefrekvens (45 BPM) */
+        /* Isolated branding classes preventing global feature contamination */
+        .brand-caps {
+            font-feature-settings: "cv08" 1; /* Appends serifs exclusively to the capital I */
+        }
+
+        .brand-low {
+            font-feature-settings: normal; /* Leaves lowercase string rendering entirely untouched */
+        }
+
+        /* High-precision cursor implementation tracked to an Olympic resting pulse (45 BPM) */
         .cursor {
             font-weight: 100;
             font-size: 7.4rem;
-            transform: scaleX(0.25); /* Gør den vertikale streg ultratynd */
+            transform: scaleX(0.25); /* Compress coordinate geometry to refine thin profile */
             display: inline-block;
             line-height: 1;
-            animation: blink 1.33s step-end infinite; /* 1.33 sekunder pr. blink */
+            animation: blink 1.333s step-end infinite; /* 60s / 45 BPM = Exactly 1.333s per cycle */
         }
 
         @keyframes blink {
@@ -47,45 +71,113 @@
             50% { color: #0f172a; }
         }
 
-        ul {
-            margin-bottom: 2.5rem;
-            line-height: 1.7;
-            font-size: 1.15rem;
+        /* Clean structural layouts for informational content blocks */
+        .bullet-list {
+            display: inline-block;
+            text-align: left;
+            max-width: 650px;
+            margin: 0 auto 2.5rem auto;
+            padding-left: 1.5rem;
         }
 
-        li {
+        .bullet-list li {
+            font-weight: 100; /* Retains clean line-weight coherence */
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #334155;
             margin-bottom: 1rem;
         }
 
-        p {
+        .example-intro {
+            font-style: italic;
+            font-weight: 100;
+            font-size: 1.1rem;
+            color: #475569;
+            text-align: left;
+            max-width: 650px;
+            margin: 0 auto 1.5rem auto;
+            padding-left: 1.5rem;
             line-height: 1.6;
-            font-size: 1.15rem;
-            margin-bottom: 1.5rem;
+        }
+
+        .meeting-question {
+            font-style: normal;
+            font-weight: 100;
+            font-size: 1.2rem;
+            color: #0f172a;
+            text-align: left;
+            max-width: 650px;
+            margin: 0 auto 1.5rem auto;
+            padding: 1rem 1.5rem;
+            background-color: #ffffff;
+            border-left: 3px solid #38bdf8; /* Digital azure indicator line */
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
 
-    <!-- Overskrift med tynd cursor forrest og to mellemrum -->
-    <h1><span class="cursor">|</span>&nbsp;&nbsp;INHOUSE ai</h1>
+    <div class="container">
+        <!-- Structural isolation guarantees clean rendering of chosen cases -->
+        <h1>
+            <span class="cursor">|</span>&nbsp;&nbsp;<span class="brand-caps">INHOUSE</span>&nbsp;<span class="brand-low">ai</span>
+        </h1>
 
-    <!-- Liste med de fire præcise punkter -->
-    <ul>
-        <li>Etabler nemt jeres egen AI inhouse i organisationen.</li>
-        <li>Lad den hjælpe med flere forskellige projekter samtidig.</li>
-        <li>Flere brugere på samme projekt kan anvende jeres AI som rådgiver indenfor projektet via browser.</li>
-        <li>Projektlederen sørger blot for at holde det gældende projektmateriale etc. ajour på jeres projektdrev.</li>
-    </ul>
+        <ul class="bullet-list">
+            <li>Etabler nemt jeres egen AI inhouse i organisationen.</li>
+            <li>Lad den hjælpe med flere forskellige projekter samtidig.</li>
+            <li>Flere brugere på samme projekt kan anvende jeres AI som rådgiver indenfor projektet via browser.</li>
+            <li>Projektlederen sørger blot for at holde det gældende projektmateriale etc. ajour på jeres projektdrev.</li>
+        </ul>
 
-    <!-- Introduktion til mødescenariet -->
-    <p>
-        Eksempel:<br>
-        Vi sidder til projekteringsmøde og spørger:
-    </p>
+        <p class="example-intro">
+            Eksempler<br><br>
+            Vi sidder til projekteringsmøde og spørger:
+        </p>
 
-    <!-- De to spørgsmål fra mødet -->
-    <p>Hvad var det nu for en energiklasse der blev besluttet ?</p>
-    
-    <p>"Husk os lige på, hvad bygherren godkendte i mailkorrespondancen vedrørende materialevalget til facaden?"</p>
+        <div class="meeting-question">
+            Hvad var det nu for en energiklasse der blev besluttet ?<br>
+            På hvilke sider i udbudsmaterialet står der noget om krav til ventilation ?
+        </div>
+        
+                <p class="example-intro">
+            Man sidder og udarbejder tilbud:
+        </p>
+
+        <div class="meeting-question">
+            Hvor står der noget om Pøle å omlægningen i udbudsmaterialet ? <br>
+        </div>
+        
+        <p class="example-intro">
+            
+            Vi vi står i byggeskuret:
+        </p>
+
+        <div class="meeting-question">
+            Husk os lige på, hvad bygherre godkendte i mailkorrespondancen vedrørende materialevalget til facaden ?
+        </div>
+        
+                        <p class="example-intro">
+            Jordentreprenøren kommer til møde:
+        </p>
+
+        <div class="meeting-question">
+            Hvor er den eksisterende gasledning beskrevet ?
+        </div>
+        
+        
+        
+                <p class="example-intro">
+        
+            Der er kommet en lang og kompliceret e-mail:
+        </p>
+
+        <div class="meeting-question">
+            Lad os opstille hvad der er rigtigt og forkert ift. det gældende projekt
+        </div>
+    </div>
 
 </body>
+</html>
