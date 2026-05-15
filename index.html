@@ -11,7 +11,7 @@
     <link href="https://googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
 
     <style>
-        /* Nulstiller standard margin og sætter den meget lyse blå baggrund */
+        /* Nulstiller standard margin, sætter baggrund og aktiverer firkantede prikker globalt */
         body {
             margin: 0;
             padding: 0;
@@ -21,6 +21,10 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
+            
+            /* Aktiverer lille l med fod (cv05) og firkantede prikker (ss02) i al brødtekst */
+            font-feature-settings: "cv05" 1, "ss02" 1;
+            -webkit-font-feature-settings: "cv05" 1, "ss02" 1;
         }
 
         /* Container til at skabe de 3 linjers afstand (3rem) fra toppen */
@@ -32,16 +36,20 @@
             text-align: center;
         }
 
-        /* Overskrift: DOBBELT så stor (7.0rem), centreret og inter thin */
+        /* Overskrift: DOBBELT så stor, centreret og med maksimale font-tweaks */
         h1 {
             font-weight: 100; /* Inter Thin */
-            font-size: 7.0rem; /* Dobbelt så stor som før */
-            color: #0f172a; /* Mørk skifergrå/sort for ren kontrast */
-            margin: 0 0 3.5rem 0; /* Justeret afstand til listen */
+            font-size: 7.0rem; 
+            color: #0f172a; 
+            margin: 0 0 3.5rem 0; 
             letter-spacing: -0.05em;
             display: flex;
             justify-content: center;
-            align-items: baseline; /* Sikrer at cursor og tekst flugter perfekt i bunden */
+            align-items: baseline;
+            
+            /* Tvinger det store I (cv08) og ai-prikkerne (ss02) til at stå knivskarpt og unikt */
+            font-feature-settings: "cv05" 1, "cv08" 1, "ss02" 1;
+            -webkit-font-feature-settings: "cv05" 1, "cv08" 1, "ss02" 1;
         }
 
         /* CSS-animation der gør cursoren ultratynd og perfekt justeret i kæmpe størrelse */
