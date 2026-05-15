@@ -26,29 +26,29 @@
         /* Container til at skabe de 3 linjers afstand (3rem) fra toppen */
         .container {
             width: 100%;
-            max-width: 800px;
+            max-width: 1000px; /* Gjort en smule bredere til den store tekst */
             padding: 3rem 1.5rem 0 1.5rem;
             box-sizing: border-box;
             text-align: center;
         }
 
-        /* Overskrift: Meget stor, centreret og inter thin */
+        /* Overskrift: DOBBELT så stor (7.0rem), centreret og inter thin */
         h1 {
             font-weight: 100; /* Inter Thin */
-            font-size: 3.5rem; /* Meget stor skrift */
+            font-size: 7.0rem; /* Dobbelt så stor som før */
             color: #0f172a; /* Mørk skifergrå/sort for ren kontrast */
-            margin: 0 0 2.5rem 0;
+            margin: 0 0 3.5rem 0; /* Justeret afstand til listen */
             letter-spacing: -0.05em;
             display: flex;
             justify-content: center;
             align-items: baseline; /* Sikrer at cursor og tekst flugter perfekt i bunden */
         }
 
-        /* CSS-animation der gør cursoren ultratynd og perfekt justeret */
+        /* CSS-animation der gør cursoren ultratynd og perfekt justeret i kæmpe størrelse */
         .cursor {
             font-weight: 100; /* Tyndeste mulige vægt */
-            font-size: 3.8rem; /* Lidt højere for at matche bogstavernes reelle højde */
-            transform: scaleX(0.4); /* Gør den vertikale streg endnu tyndere */
+            font-size: 7.4rem; /* Matched til den nye store teksthøjde */
+            transform: scaleX(0.25); /* Klemt endnu mere sammen, så den forbliver tynd i stor størrelse */
             display: inline-block;
             line-height: 1;
             animation: blink 1s step-end infinite;
@@ -81,18 +81,25 @@
 <body>
 
     <div class="container">
-        <!-- Overskrift med tynd, perfekt højdejusteret cursor og 2 spaces -->
+        <!-- Overskrift med dobbelt størrelse, tynd cursor og 2 spaces -->
         <h1><span class="cursor">|</span>&nbsp;&nbsp;INHOUSE ai</h1>
 
         <!-- Bullet points i almindelig brødtekst -->
         <ul class="bullet-list">
-            <<li>Etabler nemt din egen ai infrastruktur som virksomheden selv ejer inhouse.</li>
-            <li>Lad jeres ai hjælpe med flere forskellige projekter samtidig.</li>
-            <li>Flere brugere på samme projekt kan bruge jeres ai som rådgiver indenfor projektet via browser.</li>
+            <li>Etabler nemt din egen ai som virksomheden selv ejer inhouse.</li>
+            <li>Lad den hjælpe med flere forskellige projekter samtidig.</li>
+            <li>Flere brugere på samme projekt kan bruge jeres ai som rådgiver indenfor projektet.</li>
             <li>Projektlederen sørger blot for at holde det gældende projektmateriale, emailændringer etc. ajour på jeres projektdrev.</li>
         </ul>
     </div>
 
 </body>
 </html>
+
+
+
+
+
+
+
 
