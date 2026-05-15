@@ -74,7 +74,93 @@
 </head>
 <body>
 
-    <div class="container">
+
+
+
+
+    html<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INHOUSE ai</title>
+    
+    <!-- Henter Inter skrifttypen fra Google Fonts (både den helt tynde og almindelig) -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
+
+    <style>
+        /* Nulstiller standard margin og sætter den meget lyse blå baggrund */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f0f6fc; /* Meget lys og eksklusiv blå */
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container til at skabe de 3 linjers afstand (3rem) fra toppen */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 3rem 1.5rem 0 1.5rem;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        /* Overskrift: Meget stor, centreret og inter thin */
+        h1 {
+            font-weight: 100; /* Inter Thin */
+            font-size: 3.5rem; /* Meget stor skrift */
+            color: #0f172a; /* Mørk skifergrå/sort for ren kontrast */
+            margin: 0 0 2.5rem 0;
+            letter-spacing: -0.05em;
+            display: flex;
+            justify-content: center;
+            align-items: baseline; /* Sikrer at cursor og tekst flugter perfekt i bunden */
+        }
+
+        /* CSS-animation der gør cursoren ultratynd og perfekt justeret */
+        .cursor {
+            font-weight: 100; /* Tyndeste mulige vægt */
+            font-size: 3.8rem; /* Lidt højere for at matche bogstavernes reelle højde */
+            transform: scaleX(0.4); /* Gør den vertikale streg endnu tyndere */
+            display: inline-block;
+            line-height: 1;
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+            from, to { color: transparent }
+            50% { color: #0f172a; }
+        }
+
+        /* Liste-området placeret under overskriften */
+        .bullet-list {
+            display: inline-block;
+            text-align: left; /* Selve teksten indeni punkterne er venstrestillet */
+            max-width: 600px;
+            margin: 0 auto;
+            padding-left: 1.5rem;
+        }
+
+        /* Bullet points i almindelig brødtekst */
+        .bullet-list li {
+            font-weight: 400; /* Inter Regular */
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #334155; /* Behagelig mørkegrå brødtekst */
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
         <!-- Overskrift med den blinkende tynde cursor -->
         <h1><span class="cursor">|</span>INHOUSE ai</h1>
 
@@ -86,6 +172,9 @@
             <li>Projektlederen sørger blot for at holde det gældende projektmateriale, emailændringer etc. ajour på jeres projektdrev.</li>
         </ul>
     </div>
+        </ul>
+    </div>
 
 </body>
 </html>
+
