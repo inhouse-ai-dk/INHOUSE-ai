@@ -1,21 +1,20 @@
-html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INHOUSE ai</title>
     
-    <!-- Henter den officielle Inter skrifttype fra Google Fonts -->
+    <!-- Det helt rene link til den ægte Inter-skrifttype fra Google Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* Nulstiller margin og sætter den meget lyse blå baggrund */
         body {
             margin: 0;
             padding: 0;
-            background-color: #f0f6fc; /* Meget lys blå */
+            background-color: #f0f6fc; /* Den meget lyse blå */
             font-family: 'Inter', sans-serif;
             display: flex;
             flex-direction: column;
@@ -23,7 +22,6 @@ html<!DOCTYPE html>
             min-height: 100vh;
         }
 
-        /* Container der skaber 3 linjers afstand fra toppen */
         .container {
             width: 100%;
             max-width: 1000px;
@@ -32,30 +30,30 @@ html<!DOCTYPE html>
             text-align: center;
         }
 
-        /* Overskrift: Stor, centreret og inter thin */
+        /* Kun logoet får de 3 tweaks, intet andet */
         h1 {
             font-family: 'Inter', sans-serif;
             font-weight: 100; /* Inter Thin */
             font-size: 7.0rem; 
-            color: #0f172a; /* Mørk skifergrå */
+            color: #0f172a; 
             margin: 0 0 3.5rem 0; 
             letter-spacing: -0.05em;
             display: flex;
             justify-content: center;
-            align-items: baseline; /* Sætter cursor og tekst på samme linje */
+            align-items: baseline;
             
-            /* Aktiverer cv05, cv08 og ss02 udelukkende på logoet */
+            /* Tweak-indstillingerne kodes direkte her */
             font-feature-settings: "cv05" 1, "cv08" 1, "ss02" 1;
         }
 
-        /* CSS-animation til den tynde cursor med den olympiske hvilepuls (45 BPM) */
+        /* Den tynde cursor med din olympiske hjertefrekvens (45 BPM) */
         .cursor {
             font-weight: 100; 
             font-size: 7.4rem; 
-            transform: scaleX(0.25); /* Gør den vertikale streg tynd */
+            transform: scaleX(0.25); 
             display: inline-block;
             line-height: 1;
-            animation: blink 1.33s step-end infinite; /* 1.33 sekunder pr. blink */
+            animation: blink 1.33s step-end infinite; 
         }
 
         @keyframes blink {
@@ -63,7 +61,6 @@ html<!DOCTYPE html>
             50% { color: #0f172a; }
         }
 
-        /* Liste-området for dine bullet points */
         .bullet-list {
             display: inline-block;
             text-align: left;
@@ -73,14 +70,13 @@ html<!DOCTYPE html>
         }
 
         .bullet-list li {
-            font-weight: 400; /* Inter Regular */
+            font-weight: 400; 
             font-size: 1.15rem;
             line-height: 1.7;
             color: #334155;
             margin-bottom: 1rem;
         }
 
-        /* Introduktion til eksemplet (Scenariet) */
         .example-intro {
             font-style: italic;
             font-weight: 400;
@@ -93,7 +89,6 @@ html<!DOCTYPE html>
             line-height: 1.6;
         }
 
-        /* Spørgsmålene fra byggemødet */
         .meeting-question {
             font-style: normal;
             font-weight: 400;
@@ -103,8 +98,8 @@ html<!DOCTYPE html>
             max-width: 650px;
             margin: 0 auto 1rem auto;
             padding: 1rem 1.5rem;
-            background-color: #ffffff; /* Hvid baggrund for kontrast */
-            border-left: 3px solid #38bdf8; /* Lysblå markering i venstre side */
+            background-color: #ffffff; 
+            border-left: 3px solid #38bdf8; 
             border-radius: 4px;
             box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
             line-height: 1.5;
@@ -114,26 +109,22 @@ html<!DOCTYPE html>
 <body>
 
     <div class="container">
-        <!-- Logo med den tynde, blinkende cursor forrest og to præcise mellemrum -->
+        <!-- Her står din præcise tekst uden browser-forstyrrelser -->
         <h1><span class="cursor">|</span>&nbsp;&nbsp;INHOUSE ai</h1>
 
-        <!-- Dine præcise bullet points til byggebranchen -->
         <ul class="bullet-list">
             <li>Etabler nemt jeres egen AI inhouse i organisationen.</li>
-            <li>Lad den hjælpe med flere forskellige projekter samtidig.</li>
+            <li>Lad den hjælpe med flere forskellige projects samtidig.</li>
             <li>Flere brugere på samme projekt kan anvende jeres AI som rådgiver indenfor projektet via browser.</li>
             <li>Projektlederen sørger blot for at holde det gældende projektmateriale, e-mailændringer etc. ajour på jeres projektdrev.</li>
         </ul>
 
-        <!-- Din introduktionstekst til eksemplet -->
         <p class="example-intro">Eksempel:<br>Vi sidder til projekteringsmøde og spørger hinanden:</p>
 
-        <!-- Det første relevante spørgsmål fra mødet -->
         <div class="meeting-question">
             Hvad var det nu for en energiklasse der blev besluttet ?
         </div>
 
-        <!-- Det andet relevante spørgsmål fra mødet -->
         <div class="meeting-question">
             "Husk os lige på, hvad bygherren godkendte i mailkorrespondancen vedrørende materialevalget til facaden?"
         </div>
