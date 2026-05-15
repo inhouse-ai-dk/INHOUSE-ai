@@ -5,53 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INHOUSE ai</title>
     
-    <!-- Henter Inter skrifttypen fra Google Fonts (både den helt tynde og almindelig) -->
+    <!-- Henter den officielle Inter skrifttype fra Google Fonts -->
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
-    <link href="https://googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
 
     <style>
-        /* Nulstiller standard margin og sætter den meget lyse blå baggrund */
+        /* Sætter Inter Thin overalt på hele siden */
+        body, h1, ul, li, p {
+            font-family: 'Inter', sans-serif;
+            font-weight: 100; /* Inter Thin */
+            color: #0f172a;
+        }
+
         body {
             margin: 0;
-            padding: 0;
-            background-color: #f0f6fc; /* Meget lys og eksklusiv blå */
-            font-family: 'Inter', sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            min-height: 100vh;
+            padding: 3rem 1.5rem;
+            background-color: #f0f6fc; /* Den meget lyse blå */
         }
 
-        /* Container til at skabe de 3 linjers afstand (3rem) fra toppen */
-        .container {
-            width: 100%;
-            max-width: 1000px; /* Gjort en smule bredere til den store tekst */
-            padding: 3rem 1.5rem 0 1.5rem;
-            box-sizing: border-box;
-            text-align: center;
-        }
-
-        /* Overskrift: DOBBELT så stor (7.0rem), centreret og inter thin */
         h1 {
-            font-weight: 100; /* Inter Thin */
-            font-size: 7.0rem; /* Dobbelt så stor som før */
-            color: #0f172a; /* Mørk skifergrå/sort for ren kontrast */
-            margin: 0 0 3.5rem 0; /* Justeret afstand til listen */
+            font-size: 7.0rem;
+            margin: 0 0 3.5rem 0;
             letter-spacing: -0.05em;
             display: flex;
-            justify-content: center;
-            align-items: baseline; /* Sikrer at cursor og tekst flugter perfekt i bunden */
+            align-items: baseline;
         }
 
-        /* CSS-animation der gør cursoren ultratynd og perfekt justeret i kæmpe størrelse */
+        /* Den tynde cursor med den olympiske hjertefrekvens (45 BPM) */
         .cursor {
-            font-weight: 100; /* Tyndeste mulige vægt */
-            font-size: 7.4rem; /* Matched til den nye store teksthøjde */
-            transform: scaleX(0.25); /* Klemt endnu mere sammen, så den forbliver tynd i stor størrelse */
+            font-weight: 100;
+            font-size: 7.4rem;
+            transform: scaleX(0.25); /* Gør den vertikale streg ultratynd */
             display: inline-block;
             line-height: 1;
-            animation: blink 1.33s step-end infinite;
+            animation: blink 1.33s step-end infinite; /* 1.33 sekunder pr. blink */
         }
 
         @keyframes blink {
@@ -59,52 +47,45 @@
             50% { color: #0f172a; }
         }
 
-        /* Liste-området placeret under overskriften */
-        .bullet-list {
-            display: inline-block;
-            text-align: left; /* Selve teksten indeni punkterne er venstrestillet */
-            max-width: 600px;
-            margin: 0 auto;
-            padding-left: 1.5rem;
+        ul {
+            margin-bottom: 2.5rem;
+            line-height: 1.7;
+            font-size: 1.15rem;
         }
 
-        /* Bullet points i almindelig brødtekst */
-        .bullet-list li {
-            font-weight: 400; /* Inter Regular */
-            font-size: 1.15rem;
-            line-height: 1.7;
-            color: #334155; /* Behagelig mørkegrå brødtekst */
+        li {
             margin-bottom: 1rem;
+        }
+
+        p {
+            line-height: 1.6;
+            font-size: 1.15rem;
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <!-- Overskrift med dobbelt størrelse, tynd cursor og 2 spaces -->
-        <h1><span class="cursor">|</span>&nbsp;&nbsp;INHOUSE ai</h1>
+    <!-- Overskrift med tynd cursor forrest og to mellemrum -->
+    <h1><span class="cursor">|</span>&nbsp;&nbsp;INHOUSE ai</h1>
 
-         <h2 class="section-title">Trin 1</h2>
-        
-        <!-- Bullet points i almindelig brødtekst -->
-        <ul class="bullet-list">
-            <li>Etabler nemt jeres egen ai inhouse i virksomheden.</li>
-            <li>Lad den hjælpe med flere forskellige projekter samtidig.</li>
-            <li>Flere brugere på samme projekt kan bruge jeres ai som rådgiver indenfor projektet.</li>
-            <li>Projektlederen sørger blot for at holde det gældende projektmateriale, emailændringer etc. ajour på jeres projektdrev.</li>
-            <li>Udrul en dedikeret AI, der slår rødder i organisationen og modnes i takt med jeres indsigt.</li>
+    <!-- Liste med de fire præcise punkter -->
+    <ul>
+        <li>Etabler nemt jeres egen AI inhouse i organisationen.</li>
+        <li>Lad den hjælpe med flere forskellige projekter samtidig.</li>
+        <li>Flere brugere på samme projekt kan anvende jeres AI som rådgiver indenfor projektet via browser.</li>
+        <li>Projektlederen sørger blot for at holde det gældende projektmateriale, e-mailændringer etc. ajour på jeres projektdrev.</li>
+    </ul>
 
-                    <!-- Sektionsoverskrift: Trin 2 -->
-        <h2 class="section-title">Trin 2</h2>
-        <ul class="bullet-list">
-            <li>En ai der integreres i kulturen og udvikler sig med virksomheden.</li>
-            <li>Skab en fortrolig ai-kollega, der vokser med jeres opgaver og forstærker det menneskelige potentiale.</li>
-            <li>Udrul en dedikeret AI, der slår rødder i organisationen og modnes i takt med jeres indsigt.</li>
-        </ul>
-            
-            
-        </ul>
-    </div>
+    <!-- Introduktion til mødescenariet -->
+    <p>
+        Eksempel:<br>
+        Vi sidder til projekteringsmøde og spørger hinanden:
+    </p>
+
+    <!-- De to spørgsmål fra mødet -->
+    <p>Hvad var det nu for en energiklasse der blev besluttet ?</p>
+    
+    <p>"Husk os lige på, hvad bygherren godkendte i mailkorrespondancen vedrørende materialevalget til facaden?"</p>
 
 </body>
-</html>
