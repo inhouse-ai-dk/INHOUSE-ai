@@ -1,28 +1,29 @@
-<!DOCTYPE html>
+html<!DOCTYPE html>
 <html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INHOUSE ai</title>
     
-    <!-- Henter den fulde Inter Variable font, som understøtter avancerede OpenType-features globalt -->
-    <link rel="stylesheet" href="https://rsms.me">
+    <!-- Henter den officielle Inter skrifttype fra Google Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Inter:ital,wght@0,100;0,400;1,400&display=swap" rel="stylesheet">
 
     <style>
-        /* Nulstiller standard margin og sætter den lyseblå baggrund */
+        /* Nulstiller margin og sætter den meget lyse blå baggrund */
         body {
             margin: 0;
             padding: 0;
-            background-color: #f0f6fc; /* Meget lys og eksklusiv blå */
-            font-family: 'Inter var', sans-serif;
+            background-color: #f0f6fc; /* Meget lys blå */
+            font-family: 'Inter', sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            /* INGEN TWEAKS HER - BRØDTEKSTEN ER STANDARD */
         }
 
-        /* Container til at skabe de 3 linjers afstand (3rem) fra toppen */
+        /* Container der skaber 3 linjers afstand fra toppen */
         .container {
             width: 100%;
             max-width: 1000px;
@@ -31,30 +32,30 @@
             text-align: center;
         }
 
-        /* Overskrift: GIGANTISK (7.0rem), centreret og inter thin */
-h1 {
-    font-weight: 100; /* Inter Thin */
-    font-size: 7.0rem; 
-    color: #0f172a; 
-    margin: 0 0 3.5rem 0; 
-    letter-spacing: -0.05em;
-    display: flex;
-    justify-content: center;
-    align-items: baseline;
-    
-    /* Bevarer dine store/små bogstaver præcis som du har skrevet dem */
-    text-transform: none; 
-    font-feature-settings: "cv05" 1, "cv08" 1, "ss02" 1;
-}
+        /* Overskrift: Stor, centreret og inter thin */
+        h1 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 100; /* Inter Thin */
+            font-size: 7.0rem; 
+            color: #0f172a; /* Mørk skifergrå */
+            margin: 0 0 3.5rem 0; 
+            letter-spacing: -0.05em;
+            display: flex;
+            justify-content: center;
+            align-items: baseline; /* Sætter cursor og tekst på samme linje */
+            
+            /* Aktiverer cv05, cv08 og ss02 udelukkende på logoet */
+            font-feature-settings: "cv05" 1, "cv08" 1, "ss02" 1;
+        }
 
-        /* CSS-animation der gør cursoren ultratynd og blinker med en sund olympisk hvilepuls (45 BPM) */
+        /* CSS-animation til den tynde cursor med den olympiske hvilepuls (45 BPM) */
         .cursor {
             font-weight: 100; 
             font-size: 7.4rem; 
-            transform: scaleX(0.25); 
+            transform: scaleX(0.25); /* Gør den vertikale streg tynd */
             display: inline-block;
             line-height: 1;
-            animation: blink 1.33s step-end infinite; 
+            animation: blink 1.33s step-end infinite; /* 1.33 sekunder pr. blink */
         }
 
         @keyframes blink {
@@ -62,138 +63,81 @@ h1 {
             50% { color: #0f172a; }
         }
 
-        /* Sektionsoverskrift for Trin 2: Stilren og venstrestillet over listen */
-        .section-title {
-            font-weight: 400; 
-            font-size: 1.8rem;
-            color: #0f172a;
+        /* Liste-området for dine bullet points */
+        .bullet-list {
+            display: inline-block;
             text-align: left;
-            max-width: 600px;
-            margin: 2.5rem auto 0.5rem auto; 
+            max-width: 650px;
+            margin: 0 auto 2.5rem auto;
             padding-left: 1.5rem;
         }
 
-        /* Eksempel-tekstscenarie med linjeskift */
+        .bullet-list li {
+            font-weight: 400; /* Inter Regular */
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #334155;
+            margin-bottom: 1rem;
+        }
+
+        /* Introduktion til eksemplet (Scenariet) */
         .example-intro {
             font-style: italic;
             font-weight: 400;
             font-size: 1.1rem;
-            color: #475569; 
+            color: #475569;
             text-align: left;
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto 1.5rem auto;
             padding-left: 1.5rem;
-            line-height: 1.6; 
+            line-height: 1.6;
         }
 
-        /* Styling af det konkrete spørgsmål fra byggemødet */
+        /* Spørgsmålene fra byggemødet */
         .meeting-question {
             font-style: normal;
             font-weight: 400;
             font-size: 1.2rem;
-            color: #0f172a; 
+            color: #0f172a;
             text-align: left;
-            max-width: 600px;
-            margin: 0 auto 2rem auto;
+            max-width: 650px;
+            margin: 0 auto 1rem auto;
             padding: 1rem 1.5rem;
-            background-color: #ffffff; 
-            border-left: 3px solid #38bdf8; 
+            background-color: #ffffff; /* Hvid baggrund for kontrast */
+            border-left: 3px solid #38bdf8; /* Lysblå markering i venstre side */
             border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05); 
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05);
             line-height: 1.5;
-        }
-
-        /* Styling af AI-svaret i scenariet */
-        .ai-response {
-            font-weight: 400;
-            font-size: 1.1rem;
-            color: #1e293b;
-            text-align: left;
-            max-width: 600px;
-            margin: -1rem auto 2.5rem auto; 
-            padding: 1.2rem 1.5rem;
-            background-color: #f8fafc; 
-            border-left: 3px solid #10b981; 
-            border-radius: 4px;
-            line-height: 1.6;
-        }
-
-        .ai-response-header {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #10b981; 
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .ai-response p {
-            margin: 0 0 0.5rem 0;
-        }
-        
-        .ai-response p:last-child {
-            margin-bottom: 0;
-        }
-
-        /* Liste-området placeret under overskrifterne */
-        .bullet-list {
-            display: inline-block;
-            text-align: left; 
-            max-width: 600px;
-            margin: 0 auto 1.5rem auto;
-            padding-left: 1.5rem;
-        }
-
-        /* Bullet points i almindelig brødtekst */
-        .bullet-list li {
-            font-weight: 400; 
-            font-size: 1.15rem;
-            line-height: 1.7;
-            color: #334155; 
-            margin-bottom: 1rem;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-        <!-- Overskrift med dobbelt størrelse, tynd cursor og 2 spaces -->
+    <div class="container">
+        <!-- Logo med den tynde, blinkende cursor forrest og to præcise mellemrum -->
         <h1><span class="cursor">|</span>&nbsp;&nbsp;INHOUSE ai</h1>
-<br><br>
-        <!-- Første sektion  -->
+
+        <!-- Dine præcise bullet points til byggebranchen -->
         <ul class="bullet-list">
             <li>Etabler nemt jeres egen AI inhouse i organisationen.</li>
             <li>Lad den hjælpe med flere forskellige projekter samtidig.</li>
             <li>Flere brugere på samme projekt kan anvende jeres AI som rådgiver indenfor projektet via browser.</li>
-            <li>Projektlederen sørger blot for at holde det gældende projektmateriale, e-mailændringer etc. ajour på jeres projektdrev.</li>        
+            <li>Projektlederen sørger blot for at holde det gældende projektmateriale, e-mailændringer etc. ajour på jeres projektdrev.</li>
         </ul>
-<br><br><br>
 
-     <!-- Eksempel-scenarie introduktion -->
-        <p class="example-intro">Eksempel <br> Vi sidder til projekteringsmøde og spørger hinanden: Hvad var det nu for en energiklasse der blev besluttet ? </p>
-        <br>
-        <p class="example-intro"> eller "Husk os lige på, hvad bygherren godkendte i mailkorrespondancen vedrørende materialevalget til facaden?" </p>
+        <!-- Din introduktionstekst til eksemplet -->
+        <p class="example-intro">Eksempel:<br>Vi sidder til projekteringsmøde og spørger hinanden:</p>
 
-    
-        <!-- Trin 2
-        <h2 class="section-title">Næste trin</h2>
+        <!-- Det første relevante spørgsmål fra mødet -->
+        <div class="meeting-question">
+            Hvad var det nu for en energiklasse der blev besluttet ?
+        </div>
 
-        <ul class="bullet-list"> 
-            <li>En AI der integreres i kulturen og udvikler sig med virksomheden.</li>
-           <li>Skab en fortrolig AI-kollega, der vokser med jeres opgaver og forstærker det menneskelige potentiale.</li>
-            <li>Udrul en dedikeret AI, der slår rødder i organisationen og modnes i takt med jeres indsigt.</li>
-       </ul>  -->
-            
-            
-        </ul>
+        <!-- Det andet relevante spørgsmål fra mødet -->
+        <div class="meeting-question">
+            "Husk os lige på, hvad bygherren godkendte i mailkorrespondancen vedrørende materialevalget til facaden?"
+        </div>
     </div>
 
 </body>
 </html>
-
-
-
-
-
-
-
