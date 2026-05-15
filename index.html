@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://rsms.me">
 
     <style>
-        /* Nulstiller standard margin, sætter den lyseblå baggrund og aktiverer tweaks globalt */
+        /* Nulstiller standard margin og sætter den lyseblå baggrund */
         body {
             margin: 0;
             padding: 0;
@@ -19,15 +19,13 @@
             flex-direction: column;
             align-items: center;
             min-height: 100vh;
-            
-            /* Aktiverer lille l med fod (cv05) og firkantede prikker (ss02) i al brødtekst */
-            font-feature-settings: "cv05" 1, "ss02" 1;
+            /* INGEN TWEAKS HER - BRØDTEKSTEN ER STANDARD */
         }
 
         /* Container til at skabe de 3 linjers afstand (3rem) fra toppen */
         .container {
             width: 100%;
-            max-width: 1000px; /* Bredere layout til den store tekst */
+            max-width: 1000px;
             padding: 3rem 1.5rem 3rem 1.5rem;
             box-sizing: border-box;
             text-align: center;
@@ -37,14 +35,14 @@
         h1 {
             font-weight: 100; /* Inter Thin */
             font-size: 7.0rem; 
-            color: #0f172a; /* Mørk skifergrå/sort for ren kontrast */
+            color: #0f172a; 
             margin: 0 0 3.5rem 0; 
             letter-spacing: -0.05em;
             display: flex;
             justify-content: center;
-            align-items: baseline; /* Sikrer at cursor og tekst flugter perfekt i bunden */
+            align-items: baseline;
             
-            /* Aktiverer det store I med seriffer (cv08) og de firkantede prikker udelukkende på logoet */
+            /* DE TRE TWEAKS AKTIVERES KUN HER PÅ LOGOET */
             font-feature-settings: "cv05" 1, "cv08" 1, "ss02" 1;
         }
 
@@ -52,10 +50,10 @@
         .cursor {
             font-weight: 100; 
             font-size: 7.4rem; 
-            transform: scaleX(0.25); /* Klemt sammen så den forbliver tynd i stor størrelse */
+            transform: scaleX(0.25); 
             display: inline-block;
             line-height: 1;
-            animation: blink 1.33s step-end infinite; /* 1.33 sekunder pr. blink = 45 BPM */
+            animation: blink 1.33s step-end infinite; 
         }
 
         @keyframes blink {
@@ -65,12 +63,12 @@
 
         /* Sektionsoverskrift for Trin 2: Stilren og venstrestillet over listen */
         .section-title {
-            font-weight: 400; /* Inter Regular */
+            font-weight: 400; 
             font-size: 1.8rem;
             color: #0f172a;
             text-align: left;
             max-width: 600px;
-            margin: 2.5rem auto 0.5rem auto; /* Mindre luft i bunden, da eksemplet følger lige efter */
+            margin: 2.5rem auto 0.5rem auto; 
             padding-left: 1.5rem;
         }
 
@@ -79,12 +77,12 @@
             font-style: italic;
             font-weight: 400;
             font-size: 1.1rem;
-            color: #475569; /* Elegant, dæmpet gråblå */
+            color: #475569; 
             text-align: left;
             max-width: 600px;
             margin: 0 auto 1.5rem auto;
             padding-left: 1.5rem;
-            line-height: 1.6; /* Giver perfekt luft mellem de to linjer */
+            line-height: 1.6; 
         }
 
         /* Styling af det konkrete spørgsmål fra byggemødet */
@@ -92,15 +90,15 @@
             font-style: normal;
             font-weight: 400;
             font-size: 1.2rem;
-            color: #0f172a; /* Tydelig mørk skifergrå */
+            color: #0f172a; 
             text-align: left;
             max-width: 600px;
             margin: 0 auto 2rem auto;
             padding: 1rem 1.5rem;
-            background-color: #ffffff; /* Hvid baggrund for at poppe ud fra den lyseblå */
-            border-left: 3px solid #38bdf8; /* Flot lysblå tech-streg i venstre side */
+            background-color: #ffffff; 
+            border-left: 3px solid #38bdf8; 
             border-radius: 4px;
-            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05); /* Ultrablød skygge */
+            box-shadow: 0 1px 3px rgba(15, 23, 42, 0.05); 
             line-height: 1.5;
         }
 
@@ -111,10 +109,10 @@
             color: #1e293b;
             text-align: left;
             max-width: 600px;
-            margin: -1rem auto 2.5rem auto; /* Går helt tæt på spørgsmålet */
+            margin: -1rem auto 2.5rem auto; 
             padding: 1.2rem 1.5rem;
-            background-color: #f8fafc; /* En anelse mørkere end den lyseblå baggrund */
-            border-left: 3px solid #10b981; /* Grøn streg der indikerer "Svar / Succes" */
+            background-color: #f8fafc; 
+            border-left: 3px solid #10b981; 
             border-radius: 4px;
             line-height: 1.6;
         }
@@ -123,7 +121,7 @@
             font-size: 0.9rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            color: #10b981; /* Matcher den grønne streg */
+            color: #10b981; 
             font-weight: 600;
             margin-bottom: 0.5rem;
         }
@@ -139,7 +137,7 @@
         /* Liste-området placeret under overskrifterne */
         .bullet-list {
             display: inline-block;
-            text-align: left; /* Selve teksten indeni punkterne er venstrestillet */
+            text-align: left; 
             max-width: 600px;
             margin: 0 auto 1.5rem auto;
             padding-left: 1.5rem;
@@ -147,10 +145,10 @@
 
         /* Bullet points i almindelig brødtekst */
         .bullet-list li {
-            font-weight: 400; /* Inter Regular */
+            font-weight: 400; 
             font-size: 1.15rem;
             line-height: 1.7;
-            color: #334155; /* Behagelig mørkegrå brødtekst */
+            color: #334155; 
             margin-bottom: 1rem;
         }
     </style>
